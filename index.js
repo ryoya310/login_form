@@ -26,7 +26,7 @@ jQuery(function($){
 		checkForm()
 	});
 
-	$("#LoginID, #Password").on("keyup", function() {
+	$("#LoginID, .password_value").on("keyup", function() {
 
 		if (isClick) {
 			checkForm()
@@ -51,7 +51,7 @@ jQuery(function($){
 		$(".login_error").find("span").html(err01);
 
 		var Password = $("#Password").val();
-		var regexPass = /^((?=.*[a-zA-Z])(?=.*[0-9])|(?=.*[a-zA-Z])(?=.*?[!-\/:-@[-`{-~])|(?=.*[0-9])(?=.*?[!-\/:-@[-`{-~])|(?=.*[a-zA-Z])(?=.*[0-9])(?=.*?[!-\/:-@[-`{-~]))$/;
+		var regexPass = /((?=.*[a-zA-Z])(?=.*[0-9])|(?=.*[a-zA-Z])(?=.*?[!-\/:-@[-`{-~])|(?=.*[0-9])(?=.*?[!-\/:-@[-`{-~])|(?=.*[a-zA-Z])(?=.*[0-9])(?=.*?[!-\/:-@[-`{-~]))/;
 		var err02 = ""
 		if (Password == "") {
 			err02 = "パスワードは必須です。";
