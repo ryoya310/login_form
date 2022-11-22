@@ -55,8 +55,17 @@ body {
 
 	> div {
 		width: 80%;
-		margin: 2em auto;
+		margin: 0 auto;
+		margin-top: 2em;
 		text-align: center;
+	}
+	> p {
+		width: 80%;
+		margin: 0 auto;
+		display: block;
+		font-size: 0.7em;
+		color: #ff3300;
+		text-align: left;
 	}
 	input {
 		border: none;
@@ -139,11 +148,5 @@ body {
 		&:hover {
 			opacity: 0.8;
 		}
-	}
-	.error {
-		display: block;
-		font-size: 0.7em;
-		color: #ff3300;
-		text-align: left;
 	}
 }

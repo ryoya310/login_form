@@ -18,8 +18,22 @@ jQuery(function($){
 		}
 	})
 
+	var isClick = false;
 	//バリデーション
 	$("#login").on("click", function() {
+
+		isClick = true;
+		checkForm()
+	});
+
+	$("#LoginID, #Password").on("keyup", function() {
+
+		if (isClick) {
+			checkForm()
+		}
+	});
+
+	function checkForm() {
 
 		var isLogin = true;
 		var LoginID = $("#LoginID").val();
@@ -53,8 +67,7 @@ jQuery(function($){
 		if (isLogin) {
 			formSend()
 		}
-	});
-
+	}
 	//フォームの送信
 	function formSend() {
 
