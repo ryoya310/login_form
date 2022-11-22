@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<title>LoginForm</title>
+		<link rel="stylesheet" type="text/css" href="./index.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="./validate/jquery.validate.js" defer></script>
+		<script src="./validate/messages_ja.js" defer></script>
+		<script src="./index.js" defer></script>
+	</head>
+	<body>
+
+		<div id="loginWrapper">
+			<form id="loginForm">
+
+				<h3>アカウントをお持ちの方</h3>
+				<div class="login">
+					<div class="head_icon">
+						<!-- <svg><use href="./defs.svg#iconKey"></use></svg> -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm9.06 8.683L5.648 6.238 4.353 7.762l7.72 6.555 7.581-6.56-1.308-1.513-6.285 5.439z"/></svg>
+					</div>
+					<div class="body">
+						<input type="text" name="LoginID" id="LoginID" class="required2" label="メールアドレス">
+					</div>
+				</div>
+				<div class="password">
+					<div class="head_icon">
+						<!-- <svg><use href="./defs.svg#iconKey"></use></svg> -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 8h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2V7a6 6 0 1 1 12 0v1zm-7 7.732V18h2v-2.268a2 2 0 1 0-2 0zM16 8V7a4 4 0 1 0-8 0v1h8z"/></svg>
+					</div>
+					<div class="body password_not_view">
+						<input type="text" class="password_value" class="required2 password" label="パスワード">
+						<button type="button" class="-not-view">
+							<!-- <svg><use href="./defs.svg#iconEye01"></use></svg> -->
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M1.181 12C2.121 6.88 6.608 3 12 3c5.392 0 9.878 3.88 10.819 9-.94 5.12-5.427 9-10.819 9-5.392 0-9.878-3.88-10.819-9zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-2a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+						</button>
+					</div>
+					<div class="body password_view">
+						<input type="password" class="password_value" class="required2 password" label="パスワード">
+						<button type="button" class="-view">
+							<!-- <svg><use href="./defs.svg#iconEye02"></use></svg> -->
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M4.52 5.934L1.393 2.808l1.415-1.415 19.799 19.8-1.415 1.414-3.31-3.31A10.949 10.949 0 0 1 12 21c-5.392 0-9.878-3.88-10.819-9a10.982 10.982 0 0 1 3.34-6.066zm10.237 10.238l-1.464-1.464a3 3 0 0 1-4.001-4.001L7.828 9.243a5 5 0 0 0 6.929 6.929zM7.974 3.76C9.221 3.27 10.58 3 12 3c5.392 0 9.878 3.88 10.819 9a10.947 10.947 0 0 1-2.012 4.592l-3.86-3.86a5 5 0 0 0-5.68-5.68L7.974 3.761z"/></svg>
+						</button>
+					</div>
+					<input type="hidden" name="Password" id="Password">
+				</div>
+				<div>
+					<button type="button" id="login">ログイン</button>
+				</div>
+				<div>
+					<a href="javascript:;">パスワードをお忘れですか？</a>
+				</div>
+			</form>
+
+			<div id="toEntryForm">
+				<div>
+					<p>
+						アカウントをお持ちでない場合は、<br>
+						こちらから登録してください。
+					</p>
+					<button type="button" id="entry">新規登録</button>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
