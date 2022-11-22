@@ -386,6 +386,7 @@ $.extend( $.validator, {
 		email: "Please enter a valid email address.",
 		url: "Please enter a valid URL.",
 		password: "Please enter 8 to 100 characters including one or more single-byte alphanumerical symbols.",
+		password2: "Please enter 8 to characters including one or more single-byte alphanumerical symbols.",
 		date: "Please enter a valid date.",
 		dateISO: "Please enter a valid date (ISO).",
 		number: "Please enter a valid number.",
@@ -457,7 +458,7 @@ $.extend( $.validator, {
 
 			$( this.currentForm )
 				.on( "focusin.validate focusout.validate keyup.validate",
-					":text, [type='password'], [type='file'], select, textarea, [type='number'], [type='search'], " +
+					":text, [type='file'], select, textarea, [type='number'], [type='search'], " +
 					"[type='tel'], [type='url'], [type='email'], [type='datetime'], [type='date'], [type='month'], " +
 					"[type='week'], [type='time'], [type='datetime-local'], [type='range'], [type='color'], " +
 					"[type='radio'], [type='checkbox'], [contenteditable], [type='button']", delegate )
@@ -1200,6 +1201,7 @@ $.extend( $.validator, {
 		email: { email: true },
 		url: { url: true },
 		password: {password: true },
+		password2: {password2: true },
 		date: { date: true },
 		dateISO: { dateISO: true },
 		number: { number: true },
@@ -1471,7 +1473,11 @@ $.extend( $.validator, {
 
 			return this.optional( element ) || /^((?=.*?[a-zA-Z])(?=.*?\d)(?=.*?[!-\/:-@[-`{-~])[!-~]{8,100}|)$/.test( value );
 		},
+		// 追加
+		password2: function( value, element ) {
 
+			return this.optional( element ) || /^((?=.*[a-zA-Z])(?=.*[0-9])|(?=.*[a-zA-Z])(?=.*?[!-\/:-@[-`{-~])|(?=.*[0-9])(?=.*?[!-\/:-@[-`{-~])|(?=.*[a-zA-Z])(?=.*[0-9])(?=.*?[!-\/:-@[-`{-~]))$/.test( value );
+		},
 		// https://jqueryvalidation.org/date-method/
 		date: ( function() {
 			var called = false;

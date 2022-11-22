@@ -4,7 +4,7 @@ body {
 	margin: 3em auto;
 	width: 90%;
 }
-#loginWrapper {
+#login_wrapper {
 	display: flex;
 	align-items: center;
 	padding: 3em 0;
@@ -40,7 +40,7 @@ body {
 		}
 	}
 }
-#loginForm {
+#login_form {
 
 	margin: auto;
 	width: 50%;
@@ -63,8 +63,11 @@ body {
 		padding: 0 4px;
 	}
 
-	.login,
-	.password {
+	#Password {
+		display: none;
+	}
+	.login_box,
+	.password_box {
 		display: flex;
 		align-items: center;
 		flex-wrap: nowrap;
@@ -83,12 +86,13 @@ body {
 			}
 			button {
 				position: absolute;
+				top: 0;
 				right: 5px;
 			}
 		}
 	}
 
-	.password {
+	.password_box {
 		input {
 			width: calc(100% - 36px)!important;
 			margin-right: 36px;
